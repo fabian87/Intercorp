@@ -1,5 +1,5 @@
 # Intercorp
-##Technical challenge 
+## Technical challenge 
 
 >Desafío a resolver de microServicios:
 >
@@ -28,7 +28,7 @@ and so anyone can run the code without having to configure it.
 
 I changed the endpoints to be _REST compliant_  
 
-#[App definition](src/main/java/com/intercorp/challenge/demoApp)
+# [App definition](src/main/java/com/intercorp/challenge/demoApp)
 This is the solution to the requirements, it defines the interface for the application, so any implementation that
 complies with these definitions could be integrated on other systems that requieres this service. For example a desktop
 application could have a client service which is implemented with a module or library, or a web application could 
@@ -37,10 +37,12 @@ could be replaced and no user should ever have to update or change their own sys
 __interface segregation principle__, and a design style known as __code to the interface__ 
 and allows systems to be loosely coupled.
 
-##[Clients Module](src/main/java/com/intercorp/challenge/clients)
+## [Clients Module](src/main/java/com/intercorp/challenge/clients)
 
 This module contains the functionalities to create and retrieve clients
-####create client
+
+#### create client
+
 >POST /clients
 >* Request body:
 >`{
@@ -53,7 +55,9 @@ This module contains the functionalities to create and retrieve clients
 >   - body: the created client `{id: , name: , lastName: , birthDate: , age: , estimatedDateOfDeath: }`
 >* Example: curl -H "Content-Type:application/json" -X "POST" 
 >-d '{"name":"testName", "lastName":"testLast","birthDate":"1940-11-30"}' 'localhost:8080/clients'
-####retrieve all clients
+
+#### retrieve all clients
+
 >GET /clients
 >* Response:
 >   - code: 200,
@@ -66,12 +70,12 @@ This module contains the functionalities to create and retrieve clients
 >   - body: A client or empty if no client found
 >* example: curl -H "Content-Type:application/json" 'localhost:8080/clients/4'
 
-##[Metrics Module](src/main/java/com/intercorp/challenge/metrics)
+## [Metrics Module](src/main/java/com/intercorp/challenge/metrics)
 
 This module contains the metrics. I'm aware this is not the best way to implement this type of functionality as it has
 potential to fail and to affect other services on the host because of resources usage.
 
-####KPI clients
+#### KPI clients
 >GET /metrics/clients
 >* Response:
 >   - code: 200
