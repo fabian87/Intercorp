@@ -63,7 +63,9 @@ This module contains the functionalities to create and retrieve clients
 >   - code: 200,
 >   - body: A list of clients
 >* example: curl -H "Content-Type:application/json" localhost:8080/clients'
-####Find client by id
+
+#### Find client by id
+
 >GET /clients/{id}
 >* Response:
 >   - code: 200
