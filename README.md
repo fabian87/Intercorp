@@ -83,3 +83,5 @@ potential to fail and to affect other services on the host because of resources 
 >   - code: 200
 >   - body: Clients kpi `{averageAge: , standardDeviation: }`
 >* Example: curl -H "Content-Type:application/json" 'localhost:8080/metrics/clients'
+
+## [aws deployed example](http://intercorpchallange-env.eba-ppnwmfuz.us-east-2.elasticbeanstalk.com/clients)
